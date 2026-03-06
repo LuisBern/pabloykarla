@@ -673,14 +673,20 @@ const obs=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// ── URL params → guest data ──
-// Uso: ?n=Familia%20García&l=4
-function getParam(k){
-  return new URLSearchParams(window.location.search).get(k);
-}
+// ── Guest list — edita aquí para agregar invitados ──
+const GUESTS = {
+  // "slug": { nombre: "Nombre a mostrar", lugares: N }
+  "familia-garcia":  { nombre: "Familia García",   lugares: 4 },
+  "ana-luis":        { nombre: "Ana & Luis",        lugares: 2 },
+  "diego-martinez":  { nombre: "Diego Martínez",    lugares: 1 },
+};
+
+// ── URL: ?i=slug-del-invitado ──
 function initGuest(){
-  const name  = getParam('n') || 'Invitado especial';
-  const seats = Math.min(Math.max(parseInt(getParam('l')) || 2, 1), 10);
+  const slug   = new URLSearchParams(window.location.search).get('i');
+  const guest  = (slug && GUESTS[slug]) ? GUESTS[slug] : { nombre: 'Invitado especial', lugares: 2 };
+  const name   = guest.nombre;
+  const seats  = Math.min(Math.max(guest.lugares, 1), 10);
   const seatsTxt = seats === 1 ? '1 persona' : seats + ' personas';
 
   document.getElementById('guest-name').textContent  = name;
