@@ -689,8 +689,6 @@ function initGuest(){
   const seats  = Math.min(Math.max(guest.lugares, 1), 10);
   const seatsTxt = seats === 1 ? '1 persona' : seats + ' personas';
 
-  document.getElementById('guest-name').textContent  = name;
-  document.getElementById('guest-seats').textContent = seatsTxt;
   document.getElementById('t-name').textContent      = name;
   document.getElementById('t-count').textContent     = seatsTxt;
 
