@@ -27,8 +27,8 @@ section{position:relative;overflow:hidden;}
 .sec-body{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,4vw,20px);font-style:italic;color:var(--textm);line-height:1.85;font-weight:400;}
 
 /* ═══ HERO ═══ */
-#hero{background:var(--cream);display:flex;flex-direction:column;align-items:center;text-align:center;padding:64px 120px 72px;min-height:100vh;justify-content:center;}
-.panel{position:absolute;top:0;bottom:0;width:112px;pointer-events:none;}
+#hero{background:var(--cream);display:flex;flex-direction:column;align-items:center;text-align:center;padding:64px 108px 72px;min-height:100vh;justify-content:center;}
+.panel{position:absolute;top:0;bottom:0;width:100px;pointer-events:none;}
 .panel.L{left:0;} .panel.R{right:0;}
 #hero .eyebrow{margin-bottom:32px;letter-spacing:6px;color:var(--textl);font-size:9px;}
 .h-names{font-family:'Cormorant Garamond',serif;font-size:clamp(66px,17vw,106px);font-weight:300;line-height:.9;color:var(--olive);}
@@ -155,142 +155,126 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
 .f-sprig{width:110px;margin:0 auto 14px;opacity:.32;filter:brightness(4);}
 .f-names{font-family:'Cormorant Garamond',serif;font-size:30px;font-style:italic;color:var(--cream);opacity:.95;font-weight:300;}
 .f-date{font-size:9px;letter-spacing:4px;color:var(--lilac-light);text-transform:uppercase;opacity:.65;margin-top:8px;}
-
-/* ═══ RESPONSIVE ═══ */
-@media (max-width: 720px){
-  #hero{padding:56px 84px 64px;}
-  .panel{width:76px;}
-  .h-venue{padding:14px 22px 16px;max-width:82%;}
-  .h-venue .va{font-size:8.5px;line-height:1.5;}
-}
-@media (max-width: 520px){
-  #hero{padding:48px 50px 56px;}
-  .panel{width:46px;}
-  .h-venue{padding:13px 16px 14px;max-width:90%;}
-  .h-venue .vn{font-size:17px;}
-  #mensaje{padding:64px 24px;}
-  #mensaje .side-sprig{display:none;}
-  #mensaje .sec-body br{display:none;}
-  #mensaje .sec-body{padding:0;}
-  #countdown{padding:54px 20px;}
-  .cd-block{min-width:64px;padding:16px 12px 12px;}
-  .cd-num{font-size:36px;}
-  #fotos,#itinerario,#vestimenta,#info,#boletos,#album{padding:64px 20px;}
-  .photos-grid{grid-template-columns:1fr;}
-  .ph-cell.big{grid-column:1;}
-  .itin-wrap{max-width:100%;}
-  .itin-item{grid-template-columns:64px 28px 1fr;gap:12px;}
-  .itin-item:not(:last-child)::after{left:76px;}
-  .itin-hora{font-size:16px;}
-  .dress-row{gap:10px;}
-  .dress-card{width:140px;padding:22px 16px 18px;}
-  .palette-block{padding:20px 16px;}
-  .palette-row{gap:8px;}
-  .pal-sw{width:28px;height:28px;}
-  .info-grid{grid-template-columns:1fr;}
-  .info-cell.full{grid-column:1;}
-  .ticket-bot{padding:18px 20px 14px;gap:8px;}
-  .tb-val{font-size:15px;}
-  .seats-row{padding:0 20px 18px;}
-  .seat{width:32px;height:32px;}
-}
-@media (max-width: 380px){
-  #hero{padding:44px 36px 52px;}
-  .panel{width:32px;}
-  .h-venue{max-width:100%;}
-  .h-venue .vn{font-size:16px;}
-  .h-venue .va{font-size:8px;line-height:1.6;}
-  .itin-item:not(:last-child)::after{left:76px;}
-  .dress-row{flex-direction:column;align-items:center;}
-  .dress-card{width:160px;}
-}
 </style>
 </head>
 <body>
 
 <!-- ══ HERO ══ -->
 <section id="hero">
-  <svg class="panel L" viewBox="0 0 112 900" fill="none" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <filter id="wL">
-        <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" result="n"/>
-        <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-    </defs>
-    <g filter="url(#wL)" opacity=".84">
-      <path d="M56 900 C60 800 44 690 62 570 C74 480 52 380 68 260 C74 210 66 150 64 80 C63 50 60 20 58 4" stroke="#5a6e2a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-      <path d="M58 730 C34 714 18 686 24 662" stroke="#5a6e2a" stroke-width="1" fill="none" stroke-linecap="round"/>
-      <path d="M62 590 C86 572 98 544 90 518" stroke="#5a6e2a" stroke-width="1" fill="none" stroke-linecap="round"/>
-      <path d="M56 460 C30 444 16 414 24 390" stroke="#5a6e2a" stroke-width="1" fill="none" stroke-linecap="round"/>
-      <path d="M64 330 C88 312 100 282 90 258" stroke="#5a6e2a" stroke-width=".9" fill="none" stroke-linecap="round"/>
-      <path d="M60 210 C34 196 20 166 28 144" stroke="#5a6e2a" stroke-width=".9" fill="none" stroke-linecap="round"/>
-      <path d="M58 730 C26 710 10 680 24 654 C38 670 52 704 58 730Z" fill="#6b7c3e" opacity=".52"/>
-      <path d="M62 590 C92 568 106 536 94 510 C80 524 64 560 62 590Z" fill="#7a8f4a" opacity=".44"/>
-      <path d="M56 460 C24 440 8 408 24 382 C36 398 50 432 56 460Z" fill="#6b7c3e" opacity=".48"/>
-      <path d="M64 330 C94 310 108 278 94 252 C80 266 64 302 64 330Z" fill="#5a6e2a" opacity=".4"/>
-      <path d="M60 210 C28 194 12 162 28 136 C40 152 54 186 60 210Z" fill="#6b7c3e" opacity=".44"/>
-      <path d="M59 820 C40 810 30 796 36 786 C44 790 54 806 59 820Z" fill="#6b7c3e" opacity=".32"/>
-      <path d="M61 158 C84 144 94 120 86 104 C76 114 64 138 61 158Z" fill="#5a6e2a" opacity=".34"/>
-      <path d="M76 92 C52 62 22 58 18 76 C14 94 36 112 64 106 C54 90 56 72 76 92Z" fill="#9b8db4" opacity=".62"/>
-      <path d="M76 92 C82 60 70 38 54 40 C38 42 34 64 52 82 C56 66 68 64 76 92Z" fill="#b8aacf" opacity=".52"/>
-      <path d="M76 92 C102 72 106 46 92 34 C78 24 62 42 64 62 C72 54 80 62 76 92Z" fill="#8a7aaa" opacity=".54"/>
-      <path d="M76 92 C104 106 108 84 98 66 C88 52 74 60 72 78 C80 76 86 86 76 92Z" fill="#c8bcdc" opacity=".44"/>
-      <path d="M76 92 C88 124 74 140 58 130 C44 120 48 102 64 92 C64 106 68 118 76 92Z" fill="#a898c4" opacity=".5"/>
-      <circle cx="74" cy="90" r="7" fill="#fff8ff" opacity=".2"/>
-      <circle cx="74" cy="90" r="3" fill="#e8d8f0" opacity=".52"/>
-      <path d="M64 50 C58 30 64 14 74 16 C80 18 80 36 64 50Z" fill="#b8aacf" opacity=".42"/>
-      <path d="M64 50 C70 30 78 18 84 22 C86 28 80 44 64 50Z" fill="#9b8db4" opacity=".32"/>
-      <path d="M84 68 C80 56 84 46 90 48 C94 50 92 62 84 68Z" fill="#c8bcdc" opacity=".36"/>
-      <path d="M28 400 C8 380 -2 358 6 342 C14 330 28 342 28 360 C20 350 18 358 28 400Z" fill="#7a2d45" opacity=".54"/>
-      <path d="M28 400 C30 372 20 354 6 356 C-2 360 0 376 16 388 C16 376 20 372 28 400Z" fill="#8a3a55" opacity=".44"/>
-      <path d="M28 400 C44 382 46 360 34 346 C24 338 12 352 14 370 C22 364 26 370 28 400Z" fill="#6a2035" opacity=".5"/>
-      <path d="M28 400 C46 410 50 396 44 380 C38 366 26 372 26 386 C32 384 38 390 28 400Z" fill="#c06080" opacity=".38"/>
-      <circle cx="27" cy="394" r="5.5" fill="#fff0f4" opacity=".18"/>
-      <path d="M30 672 C12 652 4 632 12 618 C20 608 32 618 30 636 C24 626 22 634 30 672Z" fill="#9b8db4" opacity=".5"/>
-      <path d="M30 672 C32 646 22 630 10 632 C2 636 4 652 18 662 C18 652 22 648 30 672Z" fill="#b8aacf" opacity=".4"/>
-      <path d="M30 672 C46 654 48 634 36 620 C26 612 14 626 18 644 C24 638 28 644 30 672Z" fill="#8a7aaa" opacity=".46"/>
-      <circle cx="29" cy="666" r="5" fill="#f8f0ff" opacity=".16"/>
+  <svg class="panel L" viewBox="0 0 100 900" fill="none" preserveAspectRatio="xMidYMid meet">
+    <g opacity=".85">
+      <path d="M50 900 C54 780 40 660 56 540 C66 450 46 350 60 220 C66 160 58 90 56 0" stroke="#5a6e2a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <path d="M58 820 C74 808 84 788 80 770 C70 774 60 800 58 820Z" fill="#6b7c3e" opacity=".44"/>
+      <path d="M54 720 C30 704 14 676 20 652 C34 660 46 694 54 720Z" fill="#6b7c3e" opacity=".5"/>
+      <path d="M52 640 C70 628 80 608 76 590 C66 596 56 620 52 640Z" fill="#7a8f4a" opacity=".42"/>
+      <path d="M58 560 C84 542 96 514 88 488 C74 494 60 530 58 560Z" fill="#7a8f4a" opacity=".44"/>
+      <path d="M56 490 C38 478 28 458 32 442 C44 450 52 472 56 490Z" fill="#6b7c3e" opacity=".4"/>
+      <path d="M52 420 C26 400 10 370 24 348 C36 360 48 394 52 420Z" fill="#6b7c3e" opacity=".48"/>
+      <path d="M56 340 C74 328 84 308 80 292 C68 300 60 322 56 340Z" fill="#7a8f4a" opacity=".4"/>
+      <path d="M60 280 C86 262 96 234 88 210 C76 222 62 256 60 280Z" fill="#5a6e2a" opacity=".4"/>
+      <path d="M54 220 C38 210 30 192 34 178 C44 184 50 204 54 220Z" fill="#6b7c3e" opacity=".38"/>
+      <path d="M56 160 C32 146 20 118 28 96 C40 110 52 138 56 160Z" fill="#6b7c3e" opacity=".44"/>
+      <path d="M58 110 C72 100 80 84 76 72 C66 78 60 94 58 110Z" fill="#5a6e2a" opacity=".36"/>
+
+      <!-- Lila principal -->
+      <path d="M74 70 C50 44 22 40 18 58 C14 76 34 92 60 86 C52 72 54 54 74 70Z" fill="#9b8db4" opacity=".62"/>
+      <path d="M74 70 C80 40 70 22 54 24 C40 26 36 46 52 62 C56 46 66 44 74 70Z" fill="#b8aacf" opacity=".52"/>
+      <path d="M74 70 C98 52 102 28 90 16 C76 8 62 24 64 42 C70 34 80 42 74 70Z" fill="#8a7aaa" opacity=".54"/>
+      <path d="M74 70 C92 88 84 108 68 106 C56 104 54 86 66 74 C68 84 70 76 74 70Z" fill="#b8aacf" opacity=".42"/>
+      <circle cx="72" cy="68" r="6" fill="#fff8ff" opacity=".26"/>
+      <circle cx="72" cy="68" r="2.5" fill="#e8d8f0" opacity=".6"/>
+      <!-- lilas satélite -->
+      <path d="M30 130 C22 118 24 104 32 104 C40 106 38 124 30 130Z" fill="#9b8db4" opacity=".5"/>
+      <path d="M30 130 C38 118 48 112 52 118 C54 126 42 134 30 130Z" fill="#b8aacf" opacity=".4"/>
+      <circle cx="32" cy="124" r="2" fill="#fff8ff" opacity=".5"/>
+
+      <!-- Vino grande -->
+      <path d="M28 384 C8 364 -2 344 6 328 C14 316 28 328 28 346 C20 338 18 344 28 384Z" fill="#7a2d45" opacity=".55"/>
+      <path d="M28 384 C44 366 46 346 34 332 C24 324 12 338 14 356 C22 350 26 356 28 384Z" fill="#6a2035" opacity=".5"/>
+      <path d="M28 384 C16 400 20 418 32 418 C42 416 44 398 34 386 C32 394 30 392 28 384Z" fill="#8a3a55" opacity=".45"/>
+      <circle cx="27" cy="380" r="4" fill="#fff0f4" opacity=".22"/>
+      <circle cx="27" cy="380" r="1.6" fill="#f0c0cc" opacity=".55"/>
+
+      <!-- Vino satélite -->
+      <path d="M68 480 C58 470 56 454 64 452 C72 452 74 470 68 480Z" fill="#7a2d45" opacity=".48"/>
+      <path d="M68 480 C76 470 84 466 86 472 C86 480 78 488 68 480Z" fill="#8a3a55" opacity=".4"/>
+      <circle cx="70" cy="476" r="1.6" fill="#fff0f4" opacity=".5"/>
+
+      <!-- Lila inferior -->
+      <path d="M30 650 C12 634 4 614 10 600 C20 606 28 630 30 650Z" fill="#9b8db4" opacity=".5"/>
+      <path d="M30 650 C46 636 50 618 40 604 C30 600 22 618 26 634 C28 624 28 636 30 650Z" fill="#b8aacf" opacity=".4"/>
+      <path d="M30 650 C20 666 26 682 38 678 C46 674 44 658 34 652 C32 658 32 654 30 650Z" fill="#8a7aaa" opacity=".42"/>
+      <circle cx="29" cy="646" r="3.2" fill="#fff8ff" opacity=".22"/>
+
+      <!-- Vino bajo -->
+      <path d="M72 770 C60 760 58 744 66 742 C74 742 78 760 72 770Z" fill="#7a2d45" opacity=".52"/>
+      <path d="M72 770 C82 758 88 754 90 762 C88 772 82 778 72 770Z" fill="#6a2035" opacity=".42"/>
+      <circle cx="74" cy="766" r="2" fill="#fff0f4" opacity=".45"/>
+
+      <!-- Pétalos sueltos -->
+      <path d="M20 220 C16 214 18 208 22 210 C24 214 24 218 20 220Z" fill="#9b8db4" opacity=".38"/>
+      <path d="M80 250 C76 244 78 238 82 240 C84 244 84 248 80 250Z" fill="#7a2d45" opacity=".36"/>
+      <path d="M14 540 C10 534 12 528 16 530 C18 534 18 538 14 540Z" fill="#9b8db4" opacity=".36"/>
+      <path d="M82 590 C78 584 80 578 84 580 C86 584 86 588 82 590Z" fill="#7a2d45" opacity=".32"/>
+      <path d="M18 840 C14 834 16 828 20 830 C22 834 22 838 18 840Z" fill="#9b8db4" opacity=".4"/>
     </g>
   </svg>
-  <svg class="panel R" viewBox="0 0 112 900" fill="none" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <filter id="wR">
-        <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" result="n"/>
-        <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-    </defs>
-    <g filter="url(#wR)" opacity=".84" transform="translate(112,0) scale(-1,1)">
-      <path d="M56 900 C60 800 44 690 62 570 C74 480 52 380 68 260 C74 210 66 150 64 80 C63 50 60 20 58 4" stroke="#5a6e2a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-      <path d="M58 730 C34 714 18 686 24 662" stroke="#5a6e2a" stroke-width="1" fill="none" stroke-linecap="round"/>
-      <path d="M62 590 C86 572 98 544 90 518" stroke="#5a6e2a" stroke-width="1" fill="none" stroke-linecap="round"/>
-      <path d="M56 460 C30 444 16 414 24 390" stroke="#5a6e2a" stroke-width="1" fill="none" stroke-linecap="round"/>
-      <path d="M64 330 C88 312 100 282 90 258" stroke="#5a6e2a" stroke-width=".9" fill="none" stroke-linecap="round"/>
-      <path d="M60 210 C34 196 20 166 28 144" stroke="#5a6e2a" stroke-width=".9" fill="none" stroke-linecap="round"/>
-      <path d="M58 730 C26 710 10 680 24 654 C38 670 52 704 58 730Z" fill="#6b7c3e" opacity=".52"/>
-      <path d="M62 590 C92 568 106 536 94 510 C80 524 64 560 62 590Z" fill="#7a8f4a" opacity=".44"/>
-      <path d="M56 460 C24 440 8 408 24 382 C36 398 50 432 56 460Z" fill="#6b7c3e" opacity=".48"/>
-      <path d="M64 330 C94 310 108 278 94 252 C80 266 64 302 64 330Z" fill="#5a6e2a" opacity=".4"/>
-      <path d="M60 210 C28 194 12 162 28 136 C40 152 54 186 60 210Z" fill="#6b7c3e" opacity=".44"/>
-      <path d="M59 820 C40 810 30 796 36 786 C44 790 54 806 59 820Z" fill="#6b7c3e" opacity=".32"/>
-      <path d="M61 158 C84 144 94 120 86 104 C76 114 64 138 61 158Z" fill="#5a6e2a" opacity=".34"/>
-      <path d="M76 92 C52 62 22 58 18 76 C14 94 36 112 64 106 C54 90 56 72 76 92Z" fill="#7a2d45" opacity=".58"/>
-      <path d="M76 92 C82 60 70 38 54 40 C38 42 34 64 52 82 C56 66 68 64 76 92Z" fill="#8a3a55" opacity=".48"/>
-      <path d="M76 92 C102 72 106 46 92 34 C78 24 62 42 64 62 C72 54 80 62 76 92Z" fill="#6a2035" opacity=".52"/>
-      <path d="M76 92 C104 106 108 84 98 66 C88 52 74 60 72 78 C80 76 86 86 76 92Z" fill="#c06080" opacity=".4"/>
-      <path d="M76 92 C88 124 74 140 58 130 C44 120 48 102 64 92 C64 106 68 118 76 92Z" fill="#7a2d45" opacity=".46"/>
-      <circle cx="74" cy="90" r="7" fill="#fff0f4" opacity=".18"/>
-      <circle cx="74" cy="90" r="3" fill="#f0d0d8" opacity=".44"/>
-      <path d="M64 50 C58 30 64 14 74 16 C80 18 80 36 64 50Z" fill="#7a2d45" opacity=".38"/>
-      <path d="M84 68 C80 56 84 46 90 48 C94 50 92 62 84 68Z" fill="#8a3a55" opacity=".3"/>
-      <path d="M28 400 C8 380 -2 358 6 342 C14 330 28 342 28 360 C20 350 18 358 28 400Z" fill="#9b8db4" opacity=".52"/>
-      <path d="M28 400 C30 372 20 354 6 356 C-2 360 0 376 16 388 C16 376 20 372 28 400Z" fill="#b8aacf" opacity=".42"/>
-      <path d="M28 400 C44 382 46 360 34 346 C24 338 12 352 14 370 C22 364 26 370 28 400Z" fill="#8a7aaa" opacity=".48"/>
-      <path d="M28 400 C46 410 50 396 44 380 C38 366 26 372 26 386 C32 384 38 390 28 400Z" fill="#c8bcdc" opacity=".36"/>
-      <circle cx="27" cy="394" r="5.5" fill="#f8f0ff" opacity=".16"/>
-      <path d="M30 672 C12 652 4 632 12 618 C20 608 32 618 30 636 C24 626 22 634 30 672Z" fill="#7a2d45" opacity=".48"/>
-      <path d="M30 672 C32 646 22 630 10 632 C2 636 4 652 18 662 C18 652 22 648 30 672Z" fill="#8a3a55" opacity=".38"/>
-      <path d="M30 672 C46 654 48 634 36 620 C26 612 14 626 18 644 C24 638 28 644 30 672Z" fill="#6a2035" opacity=".44"/>
-      <circle cx="29" cy="666" r="5" fill="#fff0f4" opacity=".14"/>
+  <svg class="panel R" viewBox="0 0 100 900" fill="none" preserveAspectRatio="xMidYMid meet">
+    <g opacity=".85" transform="translate(100,0) scale(-1,1)">
+      <path d="M50 900 C54 780 40 660 56 540 C66 450 46 350 60 220 C66 160 58 90 56 0" stroke="#5a6e2a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <path d="M58 820 C74 808 84 788 80 770 C70 774 60 800 58 820Z" fill="#6b7c3e" opacity=".44"/>
+      <path d="M54 720 C30 704 14 676 20 652 C34 660 46 694 54 720Z" fill="#6b7c3e" opacity=".5"/>
+      <path d="M52 640 C70 628 80 608 76 590 C66 596 56 620 52 640Z" fill="#7a8f4a" opacity=".42"/>
+      <path d="M58 560 C84 542 96 514 88 488 C74 494 60 530 58 560Z" fill="#7a8f4a" opacity=".44"/>
+      <path d="M56 490 C38 478 28 458 32 442 C44 450 52 472 56 490Z" fill="#6b7c3e" opacity=".4"/>
+      <path d="M52 420 C26 400 10 370 24 348 C36 360 48 394 52 420Z" fill="#6b7c3e" opacity=".48"/>
+      <path d="M56 340 C74 328 84 308 80 292 C68 300 60 322 56 340Z" fill="#7a8f4a" opacity=".4"/>
+      <path d="M60 280 C86 262 96 234 88 210 C76 222 62 256 60 280Z" fill="#5a6e2a" opacity=".4"/>
+      <path d="M54 220 C38 210 30 192 34 178 C44 184 50 204 54 220Z" fill="#6b7c3e" opacity=".38"/>
+      <path d="M56 160 C32 146 20 118 28 96 C40 110 52 138 56 160Z" fill="#6b7c3e" opacity=".44"/>
+      <path d="M58 110 C72 100 80 84 76 72 C66 78 60 94 58 110Z" fill="#5a6e2a" opacity=".36"/>
+
+      <!-- Vino principal -->
+      <path d="M74 70 C50 44 22 40 18 58 C14 76 34 92 60 86 C52 72 54 54 74 70Z" fill="#7a2d45" opacity=".58"/>
+      <path d="M74 70 C80 40 70 22 54 24 C40 26 36 46 52 62 C56 46 66 44 74 70Z" fill="#8a3a55" opacity=".48"/>
+      <path d="M74 70 C98 52 102 28 90 16 C76 8 62 24 64 42 C70 34 80 42 74 70Z" fill="#6a2035" opacity=".52"/>
+      <path d="M74 70 C92 88 84 108 68 106 C56 104 54 86 66 74 C68 84 70 76 74 70Z" fill="#8a3a55" opacity=".4"/>
+      <circle cx="72" cy="68" r="6" fill="#fff0f4" opacity=".22"/>
+      <circle cx="72" cy="68" r="2.5" fill="#f0c0cc" opacity=".5"/>
+      <!-- Vino satélite -->
+      <path d="M30 130 C22 118 24 104 32 104 C40 106 38 124 30 130Z" fill="#7a2d45" opacity=".48"/>
+      <path d="M30 130 C38 118 48 112 52 118 C54 126 42 134 30 130Z" fill="#8a3a55" opacity=".38"/>
+      <circle cx="32" cy="124" r="2" fill="#fff0f4" opacity=".46"/>
+
+      <!-- Lila grande -->
+      <path d="M28 384 C8 364 -2 344 6 328 C14 316 28 328 28 346 C20 338 18 344 28 384Z" fill="#9b8db4" opacity=".55"/>
+      <path d="M28 384 C44 366 46 346 34 332 C24 324 12 338 14 356 C22 350 26 356 28 384Z" fill="#8a7aaa" opacity=".5"/>
+      <path d="M28 384 C16 400 20 418 32 418 C42 416 44 398 34 386 C32 394 30 392 28 384Z" fill="#b8aacf" opacity=".42"/>
+      <circle cx="27" cy="380" r="4" fill="#fff8ff" opacity=".22"/>
+      <circle cx="27" cy="380" r="1.6" fill="#e8d8f0" opacity=".55"/>
+
+      <!-- Lila satélite -->
+      <path d="M68 480 C58 470 56 454 64 452 C72 452 74 470 68 480Z" fill="#9b8db4" opacity=".48"/>
+      <path d="M68 480 C76 470 84 466 86 472 C86 480 78 488 68 480Z" fill="#b8aacf" opacity=".4"/>
+      <circle cx="70" cy="476" r="1.6" fill="#fff8ff" opacity=".5"/>
+
+      <!-- Vino inferior -->
+      <path d="M30 650 C12 634 4 614 10 600 C20 606 28 630 30 650Z" fill="#7a2d45" opacity=".52"/>
+      <path d="M30 650 C46 636 50 618 40 604 C30 600 22 618 26 634 C28 624 28 636 30 650Z" fill="#8a3a55" opacity=".42"/>
+      <path d="M30 650 C20 666 26 682 38 678 C46 674 44 658 34 652 C32 658 32 654 30 650Z" fill="#6a2035" opacity=".44"/>
+      <circle cx="29" cy="646" r="3.2" fill="#fff0f4" opacity=".2"/>
+
+      <!-- Lila bajo -->
+      <path d="M72 770 C60 760 58 744 66 742 C74 742 78 760 72 770Z" fill="#9b8db4" opacity=".5"/>
+      <path d="M72 770 C82 758 88 754 90 762 C88 772 82 778 72 770Z" fill="#8a7aaa" opacity=".42"/>
+      <circle cx="74" cy="766" r="2" fill="#fff8ff" opacity=".45"/>
+
+      <!-- Pétalos sueltos -->
+      <path d="M20 220 C16 214 18 208 22 210 C24 214 24 218 20 220Z" fill="#7a2d45" opacity=".38"/>
+      <path d="M80 250 C76 244 78 238 82 240 C84 244 84 248 80 250Z" fill="#9b8db4" opacity=".36"/>
+      <path d="M14 540 C10 534 12 528 16 530 C18 534 18 538 14 540Z" fill="#7a2d45" opacity=".36"/>
+      <path d="M82 590 C78 584 80 578 84 580 C86 584 86 588 82 590Z" fill="#9b8db4" opacity=".32"/>
+      <path d="M18 840 C14 834 16 828 20 830 C22 834 22 838 18 840Z" fill="#7a2d45" opacity=".4"/>
     </g>
   </svg>
 
