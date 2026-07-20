@@ -16,7 +16,7 @@ const GUESTS = {
   "caro":               { nombre: "Carolina Parga",             lugares: 2 },
   "pixi":               { nombre: "Andrea Aguayo",              lugares: 1 },
   "andy-popper":        { nombre: "Andrea Volcán",              lugares: 2 },
-  "daniela-becerra":    { nombre: "Daniela Becerra",            lugares: 2 },
+  "daniela-becerra":    { nombre: "Fam. Sánchez Becerra",       lugares: 2 },
   "unhelado":           { nombre: "Paulina Gallegos",           lugares: 2 },
   "digo-alma":          { nombre: "Diego y Alma",               lugares: 2 },
   "javi-arjun":         { nombre: "Javier Enríquez",            lugares: 2 },
