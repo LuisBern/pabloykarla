@@ -33,7 +33,7 @@ const GUESTS = {
   "tia-chabela":        { nombre: "Elizabeth Alcántara",        lugares: 3 },
   "conejo":             { nombre: "Adrián Segura",              lugares: 2 },
   "ale-monjaraz":       { nombre: "Alejandra Monjaraz",         lugares: 2 },
-  "chris":              { nombre: "Christofer Zermeño",         lugares: 2 },
+  "chris":              { nombre: "Cristopher Zermeño",         lugares: 1 },
   "edgar-mari":         { nombre: "Fam. Alcántara Luis",        lugares: 3 },
   "meche-anita":        { nombre: "Mercedes y Ana",             lugares: 2 },
   "argenis-alma":       { nombre: "Argenis y Alma",             lugares: 3 },
