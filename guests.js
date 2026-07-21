@@ -55,7 +55,7 @@ const GUESTS = {
   "ale-alvarez":        { nombre: "Alejandra Álvarez",          lugares: 2 },
   "jorge-alvarez":      { nombre: "Jorge Álvarez",              lugares: 1 },
   "mike-marta":         { nombre: "Fam. García Hurtado",        lugares: 2 },
-  "chiquis":            { nombre: "Daniela García Hurtado",     lugares: 1 },
+  "chiquis":            { nombre: "Daniela García Hurtado",     lugares: 2 },
   "viri-rod":           { nombre: "Fam. Morales García",        lugares: 2 },
   "elenita-consuelo":   { nombre: "Consuelo Maldonado",         lugares: 3 },
   "emmanuel":           { nombre: "Emmanuel García",            lugares: 2 },
