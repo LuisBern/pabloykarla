@@ -47,7 +47,7 @@ const GUESTS = {
   "nadia-alex":         { nombre: "Fam. Gastelum Castro",       lugares: 2 },
   "diego":              { nombre: "Fam. Alcántara Portillo",    lugares: 3 },
   "tio-ramon":          { nombre: "Fam. Alcántara Gil",         lugares: 2 },
-  "jose-angelica":      { nombre: "Fam. Peña",                  lugares: 2 },
+  "jose-angelica":      { nombre: "Familia Peña",               lugares: 2 },
   "tia-rebeca":         { nombre: "Rebeca",                     lugares: 3 },
   "irma-alfredo":       { nombre: "Fam. Maldonado García",      lugares: 2 },
   "alfredo":            { nombre: "Alfredo Maldonado García",   lugares: 2 },
