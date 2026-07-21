@@ -41,7 +41,7 @@ const GUESTS = {
   "chris":              { nombre: "Cristopher Zermeño",         lugares: 1 },
   "edgar-mari":         { nombre: "Fam. Alcántara Luis",        lugares: 3 },
   "meche-anita":        { nombre: "Mercedes y Ana",             lugares: 2 },
-  "argenis-alma":       { nombre: "Argenis y Alma",             lugares: 3 },
+  "argenis-alma":       { nombre: "Argenis y Alma",             lugares: 4 },
   "joel-alcantara":     { nombre: "Joel Alcántara",             lugares: 2 },
   "clau-felipe":        { nombre: "Claudia Loera",              lugares: 2 },
   "nadia-alex":         { nombre: "Fam. Gastelum Castro",       lugares: 2 },
