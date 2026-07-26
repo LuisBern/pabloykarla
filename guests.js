@@ -82,7 +82,7 @@ const GUESTS = {
   "padrino-antonio":    { nombre: "Fam. Montiel Arvizu",        lugares: 2 },
   "pepe":               { nombre: "José Antonio Soto",          lugares: 2 },
   "carmelita":          { nombre: "Carmen Martinez",            lugares: 2 },
-  "enrique-diaz":       { nombre: "Enrique Diaz",               lugares: 2 },
+  "enrique-diaz":       { nombre: "Enrique Díaz",               lugares: 2 },
   "flaco-luis":         { nombre: "Juan Luis Reyes",            lugares: 2 },
   "carmen-chinos":      { nombre: "Carmen Pacheco",             lugares: 2 },
   "naz-nava":           { nombre: "Nazareth Nava",              lugares: 2 },
