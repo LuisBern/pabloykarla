@@ -87,7 +87,7 @@ const GUESTS = {
   "carmen-chinos":      { nombre: "Carmen Pacheco",             lugares: 2 },
   "naz-nava":           { nombre: "Nazareth Nava",              lugares: 2 },
   "riffastic":          { nombre: "Miguel Bueno",               lugares: 2 },
-  "aurea-ruth":         { nombre: "Aurea Ruth Cruz",            lugares: 2 },
+  "aurea-ruth":         { nombre: "Áurea Ruth Cruz",            lugares: 2 },
   "gerardo-cervantes":  { nombre: "Gerardo Cervantes",          lugares: 2 },
   "eli-carmona":        { nombre: "Elizabeth Carmona",          lugares: 2 },
   "vale-arreguin":      { nombre: "Valeria Arreguin",           lugares: 2 },
