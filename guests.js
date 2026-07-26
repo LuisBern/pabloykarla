@@ -90,7 +90,7 @@ const GUESTS = {
   "aurea-ruth":         { nombre: "Áurea Ruth Cruz",            lugares: 2 },
   "gerardo-cervantes":  { nombre: "Gerardo Cervantes",          lugares: 2 },
   "eli-carmona":        { nombre: "Elizabeth Carmona",          lugares: 2 },
-  "vale-arreguin":      { nombre: "Valeria Arreguin",           lugares: 2 },
+  "vale-arreguin":      { nombre: "Valeria Arreguín",           lugares: 2 },
   "diana-castaneda":    { nombre: "Diana Castañeda",            lugares: 2 },
   "victor-martinez":    { nombre: "Victor Martinez",            lugares: 2 },
   "ramon-sanchez":      { nombre: "Edgar Ramón Sánchez",        lugares: 2 },
