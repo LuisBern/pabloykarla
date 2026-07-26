@@ -70,7 +70,7 @@ const GUESTS = {
   "ailyn":              { nombre: "Ailyn y Raúl",               lugares: 2 },
   "arturo":             { nombre: "Arturo Martínez",            lugares: 2 },
   "sergio-ferrer":      { nombre: "Sergio Ferrer",              lugares: 2 },
-  "oldchicles":         { nombre: "Angélica Rua",               lugares: 1 },
+  "oldchicles":         { nombre: "Angélica Roa",               lugares: 1 },
   "argelia":            { nombre: "Argelia Rosas",              lugares: 1 },
   "wero-diana":         { nombre: "Fam. Contreras Segura",      lugares: 2 },
   "luis-relativo":      { nombre: "Luis Granados",              lugares: 2 },
