@@ -58,7 +58,7 @@ const GUESTS = {
   "chio2":             { nombre: "Rocío Calderón",             lugares: 1 },
   "nelly":             { nombre: "Fam. Corona Pérez",          lugares: 2 },
   "rosa-isela":        { nombre: "Rosa Isela De Luna Luna",    lugares: 2 },
-  "tia-rebeca":         { nombre: "Rebeca",                     lugares: 3 },
+  "tia-rebeca":         { nombre: "Rebeca García",              lugares: 3 },
   "irma-alfredo":       { nombre: "Fam. Maldonado García",      lugares: 2 },
   "alfredo":            { nombre: "Alfredo Maldonado García",   lugares: 2 },
   "chio":               { nombre: "Rocío García Tapia",         lugares: 1 },
