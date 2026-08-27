@@ -27,7 +27,7 @@ const GUESTS = {
   "papa-ramon":         { nombre: "Fam. Alcántara Rangel",      lugares: 5 },
   "leonardos":          { nombre: "Fam. García Alarcón",        lugares: 4 },
   "edgar-garcia":       { nombre: "Fam. García Posadas",        lugares: 3 },
-  "alejandro-garcia":  { nombre: "Fam. García Zúñiga",         lugares: 2 },
+  "alejandro-garcia":  { nombre: "Alejandro García y esposa",  lugares: 2 },
   "tia-tona":           { nombre: "Tía Toña",                   lugares: 3 },
   "tio-juan":           { nombre: "Juan Carlos García y familia", lugares: 5 },
   "adriana-laura":      { nombre: "Adriana García",             lugares: 3 },
