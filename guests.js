@@ -28,7 +28,7 @@ const GUESTS = {
   "leonardos":          { nombre: "Fam. García Alarcón",        lugares: 4 },
   "edgar-garcia":       { nombre: "Fam. García Posadas",        lugares: 3 },
   "alejandro-garcia":  { nombre: "Alejandro García y esposa",  lugares: 2 },
-  "tia-tona":           { nombre: "Tía Toña",                   lugares: 3 },
+  "tia-tona":           { nombre: "Antonia Zavala",             lugares: 3 },
   "tio-juan":           { nombre: "Juan Carlos García y familia", lugares: 5 },
   "adriana-laura":      { nombre: "Adriana García",             lugares: 3 },
   "brenda-andrea":      { nombre: "Luz María García",           lugares: 4 },
