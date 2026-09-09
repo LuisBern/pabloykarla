@@ -112,4 +112,10 @@ const GUESTS = {
   "gabo":              { nombre: "Gabriel González",            lugares: 1 },
   "alvaro":            { nombre: "Fam. Rodriguez Jiménez",     lugares: 2 },
   "urbanorural":       { nombre: "Emmanuel Hernández",          lugares: 1 },
+  "melissa-montiel":   { nombre: "Melissa Montiel Arvizu",     lugares: 2 },
+  "iliana-montiel":    { nombre: "Iliana Montiel Arvizu",      lugares: 1 },
+  "elisa-abuela":      { nombre: "Fam. Cuevas Guerrero",       lugares: 5 },
+  "karina-Issa":       { nombre: "Karina Issa",                lugares: 2 },
+  "pedro-canizal":     { nombre: "Pedro Canizal",              lugares: 1 },
+  "omar-rodriguez":    { nombre: "Omar Rodríguez",             lugares: 1 },
 };
