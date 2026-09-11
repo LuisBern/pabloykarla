@@ -76,7 +76,7 @@ const GUESTS = {
   "tio-jorge":          { nombre: "Fam. Maldonado Barquera",    lugares: 2 },
   "gera":               { nombre: "Gerardo Maldonado",          lugares: 2 },
   "jorge-jr":           { nombre: "Fam. Maldonado Luna",        lugares: 2 },
-  "ailyn":              { nombre: "Ailyn y Raúl",               lugares: 2 },
+  "ailyn":              { nombre: "Aylin Camargo Ramírez",      lugares: 2 },
   "arturo":             { nombre: "Arturo Martínez",            lugares: 2 },
   "sergio-ferrer":      { nombre: "Sergio Ferrer",              lugares: 2 },
   "oldchicles":         { nombre: "Angélica Roa",               lugares: 1 },
