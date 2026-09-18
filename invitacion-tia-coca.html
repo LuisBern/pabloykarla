@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Invitación · Esthér Hernández</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+:root {
+  --olive:       #3d5229;
+  --olive-mid:   #6b7c3e;
+  --olive-light: #c8d4b0;
+  --olive-soft:  #e8ecd8;
+  --burg:        #7a2d45;
+  --burg-light:  #c06080;
+  --lilac:       #9b8db4;
+  --lilac-light: #c8bcdc;
+  --cream:       #faf8f3;
+  --parch:       #f0ebe0;
+  --parch2:      #ece6d8;
+  --text:        #2a1e14;
+  --textm:       #6a5a4a;
+  --textl:       #9a8a7a;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: var(--text);
+  background: #ccc;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: var(--parch);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22mm 20mm 18mm;
+  gap: 7mm;
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  inset: 10mm;
+  border: 1px solid var(--olive-light);
+  pointer-events: none;
+}
+.frame::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(200,212,176,.4);
+}
+
+.corner {
+  position: absolute;
+  width: 22mm;
+  height: 22mm;
+  pointer-events: none;
+}
+.corner.tl { top: 9.5mm; left: 9.5mm; }
+.corner.tr { top: 9.5mm; right: 9.5mm; transform: scaleX(-1); }
+.corner.bl { bottom: 9.5mm; left: 9.5mm; transform: scaleY(-1); }
+.corner.br { bottom: 9.5mm; right: 9.5mm; transform: scale(-1,-1); }
+
+.top-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 7px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--textl);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 0.88;
+  color: var(--olive);
+}
+
+.amp {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-style: italic;
+  color: var(--burg);
+  line-height: 1.5;
+}
+
+.date-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--textm);
+  margin-top: 6px;
+}
+
+.sprig { width: 110px; flex-shrink: 0; }
+
+.guest-block {
+  width: 100%;
+  background: var(--cream);
+  border: 1px solid var(--olive-light);
+  padding: 10mm 14mm 9mm;
+  text-align: center;
+  position: relative;
+}
+.guest-block::before,
+.guest-block::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--olive-light);
+  font-size: 7px;
+  line-height: 1;
+}
+.guest-block::before { left: 10px; }
+.guest-block::after  { right: 10px; }
+
+.para-label {
+  display: block;
+  font-size: 6.5px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--textl);
+  margin-bottom: 7px;
+}
+
+.guest-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-style: italic;
+  color: var(--olive);
+  line-height: 1.1;
+}
+
+.seats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.seats-label {
+  font-size: 6.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--burg);
+}
+
+.seat-dots { display: flex; gap: 5px; }
+
+.seat-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--olive-soft);
+  border: 1px solid var(--olive-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itin-block { width: 100%; text-align: center; }
+
+.block-label {
+  font-size: 6.5px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--textl);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.itin-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.itin-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 0 16px;
+  position: relative;
+}
+
+.itin-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: var(--olive-light);
+}
+
+.itin-hora {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--burg);
+  line-height: 1;
+}
+
+.itin-ev {
+  font-size: 6.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--textm);
+}
+
+.venue-block {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.venue-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-style: italic;
+  color: var(--olive);
+}
+
+.venue-addr {
+  font-size: 7.5px;
+  letter-spacing: 1.5px;
+  color: var(--textl);
+  text-transform: uppercase;
+}
+
+.details-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--olive-light);
+}
+
+.detail-cell {
+  background: var(--cream);
+  padding: 8mm 4mm;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.d-label {
+  font-size: 6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--textl);
+}
+
+.d-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--olive);
+}
+
+.footer-block {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--textm);
+  line-height: 1.75;
+}
+
+.footer-wa {
+  font-size: 7px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--burg);
+  opacity: .8;
+}
+
+@media print {
+  body { background: white; }
+  .page { box-shadow: none; width: 210mm; min-height: 297mm; margin: 0; }
+}
+
+@media screen {
+  body { padding: 24px; }
+  .page { box-shadow: 0 6px 48px rgba(0,0,0,.22); }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="frame"></div>
+
+  <svg class="corner tl" viewBox="0 0 66 66" fill="none">
+    <path d="M4 62 L4 4 L62 4" stroke="#c8d4b0" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M4 32 C12 24 22 20 28 26 C22 30 12 32 4 32Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M32 4 C24 12 20 22 26 28 C30 22 30 12 32 4Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M18 18 C10 10 8 2 14 2 C18 4 20 12 18 18Z" fill="#7a2d45" opacity=".45"/>
+    <circle cx="18" cy="16" r="2.5" fill="#fff0f4" opacity=".7"/>
+    <path d="M4 16 C8 10 14 8 16 12 C12 14 8 16 4 16Z" fill="#9b8db4" opacity=".45"/>
+    <path d="M16 4 C10 8 8 14 12 16 C14 12 14 8 16 4Z" fill="#9b8db4" opacity=".45"/>
+  </svg>
+  <svg class="corner tr" viewBox="0 0 66 66" fill="none">
+    <path d="M4 62 L4 4 L62 4" stroke="#c8d4b0" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M4 32 C12 24 22 20 28 26 C22 30 12 32 4 32Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M32 4 C24 12 20 22 26 28 C30 22 30 12 32 4Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M18 18 C10 10 8 2 14 2 C18 4 20 12 18 18Z" fill="#7a2d45" opacity=".45"/>
+    <circle cx="18" cy="16" r="2.5" fill="#fff0f4" opacity=".7"/>
+    <path d="M4 16 C8 10 14 8 16 12 C12 14 8 16 4 16Z" fill="#9b8db4" opacity=".45"/>
+    <path d="M16 4 C10 8 8 14 12 16 C14 12 14 8 16 4Z" fill="#9b8db4" opacity=".45"/>
+  </svg>
+  <svg class="corner bl" viewBox="0 0 66 66" fill="none">
+    <path d="M4 62 L4 4 L62 4" stroke="#c8d4b0" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M4 32 C12 24 22 20 28 26 C22 30 12 32 4 32Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M32 4 C24 12 20 22 26 28 C30 22 30 12 32 4Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M18 18 C10 10 8 2 14 2 C18 4 20 12 18 18Z" fill="#7a2d45" opacity=".45"/>
+    <circle cx="18" cy="16" r="2.5" fill="#fff0f4" opacity=".7"/>
+    <path d="M4 16 C8 10 14 8 16 12 C12 14 8 16 4 16Z" fill="#9b8db4" opacity=".45"/>
+    <path d="M16 4 C10 8 8 14 12 16 C14 12 14 8 16 4Z" fill="#9b8db4" opacity=".45"/>
+  </svg>
+  <svg class="corner br" viewBox="0 0 66 66" fill="none">
+    <path d="M4 62 L4 4 L62 4" stroke="#c8d4b0" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M4 32 C12 24 22 20 28 26 C22 30 12 32 4 32Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M32 4 C24 12 20 22 26 28 C30 22 30 12 32 4Z" fill="#6b7c3e" opacity=".5"/>
+    <path d="M18 18 C10 10 8 2 14 2 C18 4 20 12 18 18Z" fill="#7a2d45" opacity=".45"/>
+    <circle cx="18" cy="16" r="2.5" fill="#fff0f4" opacity=".7"/>
+    <path d="M4 16 C8 10 14 8 16 12 C12 14 8 16 4 16Z" fill="#9b8db4" opacity=".45"/>
+    <path d="M16 4 C10 8 8 14 12 16 C14 12 14 8 16 4Z" fill="#9b8db4" opacity=".45"/>
+  </svg>
+
+  <div class="top-block">
+    <div class="eyebrow">Nos casamos</div>
+    <div class="names">Pablo</div>
+    <span class="amp">&amp;</span>
+    <div class="names">Karla</div>
+    <div class="date-line">21 de Noviembre, 2026</div>
+  </div>
+
+  <svg class="sprig" viewBox="0 0 130 52" fill="none">
+    <defs><filter id="wcs"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+    <g filter="url(#wcs)">
+      <path d="M14 34 C40 26 65 22 65 22 C65 22 90 26 116 34" stroke="#6b7c3e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <path d="M22 28 C14 22 8 14 12 10 C16 8 22 18 22 28Z" fill="#6b7c3e" opacity=".52"/>
+      <path d="M108 28 C116 22 122 14 118 10 C114 8 108 18 108 28Z" fill="#6b7c3e" opacity=".52"/>
+      <path d="M36 26 C30 14 34 4 40 6 C44 8 44 20 36 26Z" fill="#9b8db4" opacity=".62"/>
+      <path d="M36 26 C44 8 52 0 54 6 C54 14 48 24 36 26Z" fill="#b8aacf" opacity=".48"/>
+      <circle cx="38" cy="20" r="3" fill="#fff8ff" opacity=".4"/>
+      <path d="M65 24 C58 10 62 0 70 2 C74 4 74 18 65 24Z" fill="#7a2d45" opacity=".58"/>
+      <path d="M65 24 C74 6 82 0 84 6 C84 14 78 24 65 24Z" fill="#8a3a55" opacity=".44"/>
+      <circle cx="67" cy="18" r="3" fill="#fff0f4" opacity=".35"/>
+      <path d="M94 26 C88 14 92 4 98 6 C102 8 102 20 94 26Z" fill="#9b8db4" opacity=".58"/>
+      <path d="M94 26 C102 8 110 0 112 6 C112 14 106 24 94 26Z" fill="#b8aacf" opacity=".44"/>
+    </g>
+  </svg>
+
+  <div class="guest-block">
+    <span class="para-label">Esta invitación es para</span>
+    <div class="guest-name">Esthér Hernández</div>
+    <div class="seats-row">
+      <span class="seats-label">1 lugar reservado</span>
+      <div class="seat-dots">
+        <div class="seat-dot">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#3d5229" stroke-width="1.8" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="itin-block">
+    <span class="block-label">Itinerario</span>
+    <div class="itin-row">
+      <div class="itin-item">
+        <span class="itin-hora">6:00 PM</span>
+        <span class="itin-ev">Ceremonia</span>
+      </div>
+      <div class="itin-item">
+        <span class="itin-hora">7:00 PM</span>
+        <span class="itin-ev">Cóctel</span>
+      </div>
+      <div class="itin-item">
+        <span class="itin-hora">8:00 PM</span>
+        <span class="itin-ev">Banquete</span>
+      </div>
+      <div class="itin-item">
+        <span class="itin-hora">9:00 PM</span>
+        <span class="itin-ev">Baile</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="venue-block">
+    <span class="block-label">Lugar</span>
+    <a class="venue-name" href="https://maps.app.goo.gl/RraP2uc64Yp8ytQ79" target="_blank" style="text-decoration:none;color:inherit;">Jardín Hacienda del Río ↗</a>
+    <div class="venue-addr">Camino Real al Ajusco 357 · Xochimilco, CDMX</div>
+  </div>
+
+  <div class="details-grid">
+    <div class="detail-cell">
+      <span class="d-label">Vestimenta</span>
+      <span class="d-val">Formal</span>
+    </div>
+    <div class="detail-cell">
+      <span class="d-label">Evento para</span>
+      <span class="d-val">Adultos</span>
+    </div>
+    <div class="detail-cell">
+      <span class="d-label">Confirmación</span>
+      <span class="d-val">WhatsApp</span>
+    </div>
+  </div>
+
+  <div class="footer-block">
+    <div class="footer-quote">Los esperamos con todo nuestro cariño.</div>
+    <a class="footer-wa" href="https://wa.me/525579516199" target="_blank" style="text-decoration:none;color:inherit;">Dudas · WhatsApp 55 7951 6199 ↗</a>
+  </div>
+
+</div>
+</body>
+</html>
