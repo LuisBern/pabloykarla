@@ -38,7 +38,7 @@ const GUESTS = {
   "fabi":               { nombre: "Fabiola Arenas",             lugares: 2 },
   "tia-leti":           { nombre: "Familia Chumacero Ávila",    lugares: 2 },
   "tia-estela-licha":  { nombre: "Familia Ávila García",       lugares: 2 },
-  "tio-marcelo":       { nombre: "Marcelo Pérez y esposa",     lugares: 2 },
+  "tio-marcelo":       { nombre: "Marcelino Pérez y esposa",   lugares: 2 },
   "noe-amigo":         { nombre: "Noé Pérez y esposa",         lugares: 2 },
   "tia-chabela":       { nombre: "Elizabeth Alcántara",        lugares: 3 },
   "conejo":             { nombre: "Adrián y Michelle",           lugares: 2 },
