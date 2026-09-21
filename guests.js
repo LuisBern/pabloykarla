@@ -118,4 +118,7 @@ const GUESTS = {
   "karina-Issa":       { nombre: "Karina Issa",                lugares: 2 },
   "pedro-canizal":     { nombre: "Pedro Canizal",              lugares: 1 },
   "omar-rodriguez":    { nombre: "Omar Rodríguez",             lugares: 1 },
+  "incredible-laila":  { nombre: "Laila Machado",              lugares: 1 },
+  "ulilop":            { nombre: "Ulises López",               lugares: 2 },
+  "mrmiqui":           { nombre: "Héctor Martínez",            lugares: 2 },
 };
