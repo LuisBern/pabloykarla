@@ -518,6 +518,21 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
     <div class="seats-row" id="seats-row"></div>
     <div class="ticket-note">Los esperamos con mucho cariño.</div>
   </div>
+
+  <div class="ticket reveal" id="decline-card" hidden>
+    <div class="ticket-top">
+      <div class="t-for">Hemos recibido tu respuesta,</div>
+      <div class="t-name" id="decline-name">—</div>
+    </div>
+    <div class="ticket-sep"><div class="t-dash"></div></div>
+    <div class="ticket-note" style="padding:22px 28px 10px;">
+      Lamentamos que no puedas acompañarnos, pero esperamos verte pronto.
+    </div>
+    <div class="ticket-note" style="padding:6px 28px 22px;font-size:11px;color:var(--textl);">
+      Si crees que esto es un error, escríbenos por WhatsApp.<br>
+      <a href="https://wa.me/525579516199" style="color:var(--burg);text-decoration:none;letter-spacing:1px;">55 7951 6199 ↗</a>
+    </div>
+  </div>
 </section>
 
 <!-- ══ ALBUM ══ -->
@@ -617,6 +632,14 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 function initGuest(){
   const slug = new URLSearchParams(window.location.search).get('i');
   const guest = (slug && GUESTS[slug]) ? GUESTS[slug] : { nombre:'Invitado especial', lugares:2 };
+  if(guest.lugares === 0){
+    document.querySelector('#boletos .eyebrow').textContent = 'Tu respuesta';
+    document.querySelector('#boletos .sec-title').textContent = 'Hasta pronto';
+    document.querySelector('.ticket').hidden = true;
+    document.getElementById('decline-name').textContent = guest.nombre;
+    document.getElementById('decline-card').hidden = false;
+    return;
+  }
   const seats = Math.min(Math.max(guest.lugares,1),10);
   document.getElementById('t-name').textContent = guest.nombre;
   document.getElementById('t-count').textContent = seats === 1 ? '1 persona' : seats+' personas';
