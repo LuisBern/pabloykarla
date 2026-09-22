@@ -24,7 +24,7 @@ const GUESTS = {
   "marce":              { nombre: "Marcela Rodríguez",          lugares: 2 },
   "miranda":            { nombre: "Miranda Jaramillo",          lugares: 2 },
   "canek":              { nombre: "Canek Peláez",               lugares: 2 },
-  "papa-ramon":         { nombre: "Fam. Alcántara Rangel",      lugares: 5 },
+  "papa-ramon":         { nombre: "Fam. Alcántara Rangel",      lugares: 3 },
   "leonardos":          { nombre: "Fam. García Alarcón",        lugares: 4 },
   "edgar-garcia":       { nombre: "Fam. García Posadas",        lugares: 3 },
   "alejandro-garcia":  { nombre: "Alejandro García y esposa",  lugares: 2 },
