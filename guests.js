@@ -52,7 +52,7 @@ const GUESTS = {
   "clau-felipe":        { nombre: "Claudia Loera",              lugares: 2 },
   "nadia-alex":         { nombre: "Fam. Gastelum Castro",       lugares: 2 },
   "diego":              { nombre: "Fam. Alcántara Portillo",    lugares: 3 },
-  "tio-ramon":          { nombre: "Fam. Alcántara Gil",         lugares: 2 },
+  "tio-ramon":          { nombre: "Fam. Alcántara Gil",         lugares: 3 },
   "jose-angelica":      { nombre: "Familia Peña",               lugares: 0 },
   "tio-isra":          { nombre: "Israel Zapata y esposa",     lugares: 0 },
   "chio2":             { nombre: "Rocío Calderón",             lugares: 2 },
