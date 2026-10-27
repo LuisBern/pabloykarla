@@ -312,7 +312,7 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
   <div class="h-names reveal">Pablo</div>
   <div class="h-dots reveal"><span></span><span></span><span></span></div>
   <div class="h-date reveal">21 de Noviembre, 2026</div>
-  <div class="h-time reveal">Ceremonia · 6:00 PM</div>
+  <div class="h-time reveal">Ceremonia · 5:30 PM</div>
   <div class="h-venue reveal">
     <div class="vn">Jardín Hacienda del Río</div>
     <div class="vs">Ceremonia &amp; Recepción</div>
@@ -399,24 +399,24 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
   <div class="hairline reveal"></div>
   <div class="itin-wrap reveal">
     <div class="itin-item">
-      <div class="itin-hora">6:00 PM</div>
+      <div class="itin-hora">5:30 PM</div>
       <div class="itin-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></svg></div>
       <div class="itin-main"><span class="itin-ev">Ceremonia</span><span class="itin-sub">El sí, acepto</span></div>
     </div>
     <div class="itin-item">
-      <div class="itin-hora">7:00 PM</div>
+      <div class="itin-hora">6:30 PM</div>
       <div class="itin-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-2 8a4 4 0 0 1-4 0L8 3z"/><line x1="12" y1="11" x2="12" y2="19"/><line x1="8" y1="19" x2="16" y2="19"/></svg></div>
       <div class="itin-main"><span class="itin-ev">Cóctel</span><span class="itin-sub">En el jardín</span></div>
     </div>
     <div class="itin-item">
-      <div class="itin-hora">8:00 PM</div>
+      <div class="itin-hora">7:30 PM</div>
       <div class="itin-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="3" x2="8" y2="21"/><path d="M6 3h4v8a2 2 0 0 1-4 0V3z"/><line x1="16" y1="3" x2="16" y2="21"/><path d="M14 3c0 0 3 2 3 6s-3 6-3 6"/></svg></div>
       <div class="itin-main"><span class="itin-ev">Banquete</span><span class="itin-sub">Y brindis</span></div>
     </div>
     <div class="itin-item">
-      <div class="itin-hora">9:00 PM</div>
+      <div class="itin-hora">8:30 PM</div>
       <div class="itin-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-      <div class="itin-main"><span class="itin-ev">Baile</span><span class="itin-sub">Hasta la media noche</span></div>
+      <div class="itin-main"><span class="itin-ev">Baile</span><span class="itin-sub">Hasta la 1:00 AM</span></div>
     </div>
   </div>
 </section>
@@ -512,7 +512,7 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
     <div class="ticket-sep"><div class="t-dash"></div></div>
     <div class="ticket-bot">
       <div class="tb-item"><div class="tb-lbl">Fecha</div><div class="tb-val">21 · Nov</div></div>
-      <div class="tb-item"><div class="tb-lbl">Hora</div><div class="tb-val">6:00 PM</div></div>
+      <div class="tb-item"><div class="tb-lbl">Hora</div><div class="tb-val">5:30 PM</div></div>
       <div class="tb-item"><div class="tb-lbl">Lugares</div><div class="tb-val" id="t-count">—</div></div>
     </div>
     <div class="seats-row" id="seats-row"></div>
@@ -615,7 +615,7 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
 <script src="guests.js"></script>
 <script>
 function tick(){
-  const d=new Date('2026-11-21T18:00:00')-new Date();
+  const d=new Date('2026-11-21T17:30:00')-new Date();
   if(d<=0){['cd-d','cd-h','cd-m','cd-s'].forEach(i=>document.getElementById(i).textContent='00');return;}
   document.getElementById('cd-d').textContent=String(Math.floor(d/86400000)).padStart(2,'0');
   document.getElementById('cd-h').textContent=String(Math.floor(d%86400000/3600000)).padStart(2,'0');
