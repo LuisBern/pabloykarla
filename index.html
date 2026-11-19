@@ -517,10 +517,11 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
       <div class="t-name" id="t-name">—</div>
     </div>
     <div class="ticket-sep"><div class="t-dash"></div></div>
-    <div class="ticket-bot">
+    <div class="ticket-bot" id="ticket-bot">
       <div class="tb-item"><div class="tb-lbl">Fecha</div><div class="tb-val">21 · Nov</div></div>
       <div class="tb-item"><div class="tb-lbl">Hora</div><div class="tb-val">5:30 PM</div></div>
       <div class="tb-item"><div class="tb-lbl">Lugares</div><div class="tb-val" id="t-count">—</div></div>
+      <div class="tb-item" id="t-mesa-item" hidden><div class="tb-lbl">Mesa</div><div class="tb-val" id="t-mesa">—</div></div>
     </div>
     <div class="seats-row" id="seats-row"></div>
     <div class="ticket-note">Los esperamos con mucho cariño.</div>
@@ -696,6 +697,12 @@ function initGuest(){
   const seats = Math.min(Math.max(guest.lugares,1),10);
   document.getElementById('t-name').textContent = guest.nombre;
   document.getElementById('t-count').textContent = seats === 1 ? '1 persona' : seats+' personas';
+  const mesa = (typeof MESAS !== 'undefined' && slug) ? MESAS[slug] : null;
+  if(mesa){
+    document.getElementById('t-mesa').textContent = mesa;
+    document.getElementById('t-mesa-item').hidden = false;
+    document.getElementById('ticket-bot').style.gridTemplateColumns = '1fr 1fr';
+  }
   const row = document.getElementById('seats-row');
   row.innerHTML = '';
   for(let i=0;i<seats;i++){
