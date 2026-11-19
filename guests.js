@@ -127,4 +127,5 @@ const GUESTS = {
   "incredible-laila":  { nombre: "Laila Machado",              lugares: 2 },
   "ulilop":            { nombre: "Ulises López",               lugares: 2 },
   "mrmiqui":           { nombre: "Héctor Martínez",            lugares: 2 },
+"toriroll":           { nombre: "Ángela Janin",            lugares: 1 },
 };
