@@ -177,6 +177,13 @@ section{position:relative;overflow:hidden;}
 .bank-copy{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--burg);background:none;border:1px solid rgba(122,45,69,.3);padding:9px 16px;cursor:pointer;transition:background .2s;}
 .bank-copy:hover{background:rgba(122,45,69,.06);}
 .modal-btn{display:block;text-align:center;margin-top:8px;padding:8px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--textl);background:none;border:none;cursor:pointer;width:100%;}
+.menu-course{margin:16px 0 6px;}
+.menu-course-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--olive);margin-bottom:3px;}
+.menu-dish-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--text);line-height:1.2;}
+.menu-dish-desc{font-size:13px;font-style:italic;color:var(--textm);line-height:1.45;margin-top:2px;}
+.menu-drinks{margin-top:4px;}
+.menu-drinks-row{margin:8px 0;font-size:13px;color:var(--textm);line-height:1.5;}
+.menu-drinks-row b{color:var(--text);font-weight:500;display:block;font-size:13px;margin-bottom:1px;}
 
 /* ═══ FOOTER ═══ */
 footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction:column;align-items:center;text-align:center;}
@@ -411,7 +418,7 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
     <div class="itin-item">
       <div class="itin-hora">7:30 PM</div>
       <div class="itin-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="3" x2="8" y2="21"/><path d="M6 3h4v8a2 2 0 0 1-4 0V3z"/><line x1="16" y1="3" x2="16" y2="21"/><path d="M14 3c0 0 3 2 3 6s-3 6-3 6"/></svg></div>
-      <div class="itin-main"><span class="itin-ev">Banquete</span><span class="itin-sub">Y brindis</span></div>
+      <div class="itin-main"><span class="itin-ev">Banquete</span><span class="itin-sub">Y brindis</span><button onclick="document.getElementById('modal-menu').classList.add('open')" style="background:none;border:none;padding:0;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--olive);margin-top:6px;display:block;">Ver menú →</button></div>
     </div>
     <div class="itin-item">
       <div class="itin-hora">8:30 PM</div>
@@ -609,6 +616,52 @@ footer{background:var(--burg);padding:52px 24px 44px;display:flex;flex-direction
     </div>
 
     <button class="modal-btn" onclick="document.getElementById('modal-regalos').classList.remove('open')">Cerrar</button>
+  </div>
+</div>
+
+<!-- ══ MODAL MENÚ ══ -->
+<div class="modal-overlay" id="modal-menu" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modal-menu').classList.remove('open')">✕</button>
+    <div class="modal-eyebrow">21 · Noviembre · 2026</div>
+    <div class="modal-title">Menú</div>
+    <div class="modal-hairline"></div>
+
+    <div class="menu-course">
+      <div class="menu-course-lbl">Primer tiempo</div>
+      <div class="menu-dish-name">Ensalada Protocolo</div>
+    </div>
+
+    <div class="menu-course">
+      <div class="menu-course-lbl">Segundo tiempo</div>
+      <div class="menu-dish-name">Rollo mestizo</div>
+      <div class="menu-dish-desc">Relleno de elote y queso crema en salsa de elote</div>
+    </div>
+
+    <div class="menu-course">
+      <div class="menu-course-lbl">Tercer tiempo</div>
+      <div class="menu-dish-name">Lomo sellado mechado de ejote y papa</div>
+      <div class="menu-dish-desc">En salsa de tres chiles, acompañado de puré de camote con guayaba y papas cubo al perejil</div>
+    </div>
+
+    <div class="menu-course">
+      <div class="menu-course-lbl">Postre</div>
+      <div class="menu-dish-name">Pastel Sacher · Tarta de maracuyá</div>
+      <div class="menu-dish-desc">Acompañados de café de olla y americano</div>
+    </div>
+
+    <div class="modal-divider"><span>bebidas</span></div>
+
+    <div class="menu-drinks">
+      <div class="menu-drinks-row"><b>Sin alcohol</b>Agua de limón con menta · Jamaica con canela · Boing · Heineken 0.0</div>
+      <div class="menu-drinks-row"><b>Cocteles</b>Penicillin · Moscow Mule · Cucumber Punch · Carajillo · Berry Bride · Piña colada · Soda de lychee</div>
+      <div class="menu-drinks-row"><b>Cerveza</b>Corona · Victoria · Nochebuena</div>
+      <div class="menu-drinks-row"><b>Vino</b>Tempranillo · Cabernet Sauvignon · Cabernet Blanc</div>
+      <div class="menu-drinks-row"><b>Destilados</b>Ron · Whisky · Tequila · Vodka · Mezcal · Brandy</div>
+      <div class="menu-drinks-row"><b>Digestivos</b>Baileys · Anís</div>
+    </div>
+
+    <button class="modal-btn" onclick="document.getElementById('modal-menu').classList.remove('open')">Cerrar</button>
   </div>
 </div>
 
