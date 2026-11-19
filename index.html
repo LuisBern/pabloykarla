@@ -685,7 +685,11 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 function initGuest(){
   const slug = new URLSearchParams(window.location.search).get('i');
-  const guest = (slug && GUESTS[slug]) ? GUESTS[slug] : { nombre:'Invitado especial', lugares:2 };
+  const guest = (slug && GUESTS[slug]) ? GUESTS[slug] : null;
+  if(!guest){
+    document.querySelector('.ticket').hidden = true;
+    return;
+  }
   if(guest.lugares === 0){
     document.querySelector('#boletos .eyebrow').textContent = 'Tu respuesta';
     document.querySelector('#boletos .sec-title').textContent = 'Hasta pronto';
