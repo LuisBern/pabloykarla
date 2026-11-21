@@ -44,7 +44,7 @@ const GUESTS = {
   "conejo":             { nombre: "Adrián y Michelle",           lugares: 1 },
   "ale-monjaraz":       { nombre: "Alejandra Monjaraz",         lugares: 2 },
   "chris":              { nombre: "Cristopher Zermeño",         lugares: 2 },
-  "edgar-mari":         { nombre: "Fam. Alcántara Luis",        lugares: 2 },
+  "edgar-mari":         { nombre: "Fam. Alcántara Luis",        lugares: 3 },
   "meche-anita":        { nombre: "Mercedes y Ana",             lugares: 2 },
   "tia-coca":           { nombre: "Esthér Hernández",           lugares: 0 },
   "argenis-alma":       { nombre: "Argenis y Alma",             lugares: 2 },
